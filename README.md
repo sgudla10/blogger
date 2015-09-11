@@ -16,7 +16,8 @@ Time spent: `20`
 - [*] User can comments on their blog posts on their Profile
 - [*] Logged In users can comment on any blog post
 - [*] Comments are viewable at the bottom of the associated blog post
-
+GIF Walkthrough
+![GIF](walkthrough.gif)
 
 
 
