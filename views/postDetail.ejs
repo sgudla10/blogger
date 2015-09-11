@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <title>Authenticator</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body         { padding-top:80px; word-wrap:break-word; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="well">
+           
+            <p>
+                <%= post.title %></a>
+                </br>
+                <%= post.content %></a>
+                <image src="<%= image %>"/>
+           </p>
+        </div>
+
+        <div>
+             <% for(var i=0; i<comments.length; i++) {%>
+               
+                <%= comments[i].comment %> </br>
+            <% } %>
+
+        </div>
+<div>
+  <form action="/blog/post/addComment/<%= post._id %>" method="post">
+        <h3>Add comments</h3>
+        <div class="form-group">
+     
+            <input type="text" class="form-control" name="content">
+        </div>
+ 
+              
+        <button type="submit" class="btn btn-warning btn-lg">Post</button>
+    </form>
+
+</div>
+
+</div>
+</body>
+</html>
